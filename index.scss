@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+
+body,html {
+    /* Explicitly set background color */
+    background-color: transparent;
+    /* Disable scrollbars by clipping page overflow */
+    overflow: hidden;
+    margin:0;
+    padding: 0;
+}
+#container {
+    opacity: 0;
+    transition: 0.5s;
+
+    &.visible {
+        transition: 0.5s;
+        opacity: 1;
+    }
+}
+#schedule {
+    margin: 40px;
+    * {
+//    border: 1px solid white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 150%;
+        color: white;
+    }
+    div.programme {
+        transition: 0.5s;
+        display: none;
+        display: flex;
+        margin-bottom: 20px;
+        align-content: center;
+        opacity: 0;
+
+        &.visible {
+        }
+        .programme-time {
+            margin-right: 20px;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-right: 5px solid white;
+        }
+
+        .programme-title {
+            padding: 0px;
+            margin: 0px;
+        }
+        &.show {
+            transition: 0.5s;
+            opacity: 1;
+        }
+    }
+}
+
+#topbox {
+    background-image: linear-gradient(rgba(150, 150, 150, 0.8), rgba(220, 220, 220, 0.8));
+    margin: 0;
+    padding: 30px 40px;
+}
+
+#logo {
+    width: 500px;
+}
